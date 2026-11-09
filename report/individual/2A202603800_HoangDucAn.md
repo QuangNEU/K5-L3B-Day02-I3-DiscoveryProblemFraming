@@ -9,7 +9,7 @@
 - Họ tên: Hoàng Đức An
 - MSSV: 2A202603800
 - Email trường (không bắt buộc, repo có thể để public):
-- Tên nhóm: K3
+- Tên nhóm: I3
 - Link repo nhóm: https://github.com/QuangNEU/K5-L3B-Day02-K3-DiscoveryProblemFraming
 
 ---
@@ -47,9 +47,9 @@ Lăng kính: **Lặp lại** · **Tốn thời gian** · **Cần đọc, tổng 
 | Trường | Nội dung |
 |---|---|
 | Job Story | Khi hoàn thành buổi họp, tôi muốn hệ thống tự động tổng hợp toàn bộ buổi họp để tôi không bị quên nội dung và tiết kiếm thời gian xem lại buổi họp |
-| Actor |CEO, Nhân viên văn phòng |
+| Actor |Người tham gia cuộc họp |
 | Thời điểm / bối cảnh |Sau các cuộc họp dự án, họp sprint, họp giao ban hoặc họp với khách hàng. |
-| Quy trình hiện tại (3–7 bước) |Ghi âm buổi họp -> Mở lại bản ghi -> Nghe và tổng hợp nội dung |
+| Quy trình hiện tại (3–7 bước) |Ghi âm buổi họp -> Mở lại bản ghi -> Đọc ghi chú, đối chiếu nội dung -> Tổng hợp nội dung và các quyết định -> Xác định action item, người phụ trách và deadline -> Soạn biên bản họp |
 | Bottleneck (bước nào, mất bao nhiêu phút) | Bước 2-3 Nghe lại bản ghi, đọc ghi chú và xác định action item. Ước tính 30–60 phút cho mỗi cuộc họp.|
 | Impact (nếu không giải thì sao) |Tốn thời gian của nhân viên; bỏ sót đầu việc; nhầm người phụ trách; chậm tiến độ do các thành viên không nắm rõ quyết định sau cuộc họp. |
 | Success metric (baseline → target) |Thời gian làm biên bản: 30–60 phút → dưới 10 phút. Tỷ lệ đầu việc được ghi nhận đầy đủ: đo baseline → mục tiêu trên 95%. |
@@ -60,7 +60,10 @@ Lăng kính: **Lặp lại** · **Tốn thời gian** · **Cần đọc, tổng 
 Quy trình nháp hiện tại:
 
 ```text
-    Ghi âm buổi họp -> Sử dụng AI Speech-to-text để lấy nội dung -> Dùng LLM để tổng hợp nội dung
+    HIỆN TẠI — 30–60 phút
+
+    [1 Ghi âm buổi họp] → [2 Mở và nghe lại bản ghi: 15–30'] → [3 Đọc ghi chú, đối chiếu nội dung: 5–10'] → [4 Tổng hợp nội dung và các quyết định: 5–10'] <- BOTTLENECK 
+    → [5 Xác định action item, người phụ trách và deadline: 5–10'] → [6 Soạn biên bản họp: 5–10']
 ```
 
 ### Problem Card #2
@@ -81,7 +84,11 @@ Quy trình nháp hiện tại:
 Quy trình nháp hiện tại:
 
 ```text
-    Nhận yêu cầu khách hàng -> Đưa cho mô hình phân loại -> Đưa yêu cầu tới bên liên quan
+    HIỆN TẠI — 5 phút/yêu cầu
+
+    [1 Tiếp nhận yêu cầu từ khách hàng: 1'] → [2 Đọc nội dung và xác định vấn đề: 2']
+    → [3 Phân loại yêu cầu (kỹ thuật, thanh toán, bảo hành, khiếu nại...): 3'] ← BOTTLENECK
+    → [4 Xác định bộ phận phụ trách: 1'] → [5 Chuyển ticket đến bộ phận xử lý: 1']
 ```
 
 ### Problem Card #3
@@ -102,20 +109,23 @@ Quy trình nháp hiện tại:
 Quy trình nháp hiện tại:
 
 ```text
-    Nhận yêu cầu -> đưa yêu cầu cho LLM hiểu -> Chuyển thành bộ lọc tìm kiếm -> In ra danh sách căn hộ
+    HIỆN TẠI — 20–45 phút/lần tìm kiếm
+
+    [1 Xác định nhu cầu khách hàng: 3–5'] → [2 Lọc căn hộ theo ngân sách, vị trí, diện tích và tiện ích: 5–15'] ← BOTTLENECK 
+    → [3 Kiểm tra tình trạng căn hộ còn bán/cho thuê: 5–15'] → [4 So sánh và chọn các căn phù hợp: 5–10'] → [5 Tổng hợp và gửi danh sách căn hộ cho khách hàng: 2–5']
 ```
 
 ### Card muốn pitch nhất
 
-- Card số:
-- Vì sao:
-- Câu hỏi muốn nhóm phản biện:
+- Card số: 1
+- Vì sao: Trong một buổi họp thường có rất nhiều thông tin, nhân viên văn phòng và CEO khó có thể tổng hợp và ghi nhớ toàn bộ.
+- Câu hỏi muốn nhóm phản biện: Có phương án để đảm bảo tính bảo mật không?
 
 ### AI đã phản biện card thế nào
 
 | Điểm yếu AI chỉ ra | Đồng ý? | Đã sửa gì |
 |---|---|---|
-| | | |
+|CEO và nhân viên văn phòng là hai nhóm có nhu cầu rất khác nhau. Chưa xác định ai là người trực tiếp ghi biên bản, ai là người sử dụng kết quả và ai chịu trách nhiệm theo dõi action item. | Đồng ý |Người tham gia cuộc họp |
 
 ---
 
@@ -123,16 +133,10 @@ Quy trình nháp hiện tại:
 
 | Hoạt động | Tôi đã làm gì? | Kết quả / ảnh hưởng tới bài nhóm |
 |---|---|---|
-| Pitch Problem Card | | |
-| Phản biện bài của bạn khác | Câu hỏi tôi đã đặt: | |
-| Nhận phản biện | Câu hỏi tôi nhận được: | Tôi đã sửa gì: |
-| Gom cluster / cây OST | | |
-| Chọn candidate problem | | |
-| Kiểm chứng / research | | |
-| Quy trình nhóm | | |
-| Problem Statement | | |
-| Mức can thiệp AI | | |
-| Quyết định | | |
+| Pitch Problem Card |Pitch Tóm tắt cuộc họp, Phân loại yêu cầu CSKH, Lọc tìm tự động căn hộ |Vào shortlist |
+| Nhận phản biện | Câu hỏi tôi nhận được: CSKH có scope quá rộng| Tôi đã sửa gì: Thu hẹp lại với chỉ CSKH phòng khách sạn|
+| Chọn candidate problem | Đánh giá điểm theo tiêu chí | Nhóm chọn được problem phù hợp |
+| Quy trình nhóm |Vẽ quy trình hiện tại và tương lai |Nhóm dùng làm bản cuối |
 
 ---
 
@@ -140,12 +144,9 @@ Quy trình nháp hiện tại:
 
 | Checkpoint | Tôi dùng AI để làm gì? | AI hữu ích ở đâu? | AI sai hoặc hời hợt ở đâu? | Tôi sửa gì bằng nhận định của mình? |
 |---|---|---|---|---|
-| CP1 Scan | | | | |
-| CP2 Problem Card | | | | |
-| CP4 Research | | | | |
-| CP5 Quy trình | | | | |
-| CP5–6 Problem Statement | | | | |
-| CP6 Mức can thiệp / quyết định | | | | |
+| CP1 Scan | Gợi ý thêm problem | Nêu rõ problem | Thiếu dẫn chứng thực tế |  |
+| CP2 Problem Card | Phản biện | Chỉ ra đúng lỗi sai | Có một số câu hỏi không nằm problem | |
+| CP5 Quy trình | Gợi ý quy trình cải thiện | Chỉ ra các phần mà AI có thể tác động | AI dự đoán thời gian không thực tế | Dự đoán thời gian xe đến chỉ mất 5 giây |
 
 ---
 
