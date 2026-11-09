@@ -133,10 +133,11 @@ Quy trình nháp hiện tại:
 
 | Hoạt động | Tôi đã làm gì? | Kết quả / ảnh hưởng tới bài nhóm |
 |---|---|---|
-| Pitch Problem Card |Pitch Tóm tắt cuộc họp, Phân loại yêu cầu CSKH, Lọc tìm tự động căn hộ |Vào shortlist |
+| Pitch Problem Card | Pitch Tóm tắt cuộc họp, Phân loại yêu cầu CSKH, Lọc tìm tự động căn hộ | Vào shortlist |
 | Nhận phản biện | Câu hỏi tôi nhận được: CSKH có scope quá rộng| Tôi đã sửa gì: Thu hẹp lại với chỉ CSKH phòng khách sạn|
 | Chọn candidate problem | Đánh giá điểm theo tiêu chí | Nhóm chọn được problem phù hợp |
-| Quy trình nhóm |Vẽ quy trình hiện tại và tương lai |Nhóm dùng làm bản cuối |
+| Quy trình nhóm | Vẽ quy trình hiện tại và tương lai | Nhóm dùng làm bản cuối |
+| Problem Statement v0 | Ghi nội dung Problem Statement v0 | Bảng có đầy đủ thông tin |
 
 ---
 
@@ -154,19 +155,19 @@ Quy trình nháp hiện tại:
 
 Trả lời bằng trải nghiệm thật của bạn, tối thiểu 200 từ cho các câu 6.1–6.6 (không tính 6.7, câu này được chấm riêng ở tiêu chí C5). **Không dùng AI để viết thay.**
 
-**6.1. Tôi học được gì khi nghe top 3 problems của các bạn khác?**
+**6.1. Tôi học được gì khi nghe top 3 problems của các bạn khác?** Cách mọi người quan sát mọi người xung quanh để nắm bắt được vấn đề cần giải quyết
 
-**6.2. Nhóm có lúc nào bị "solution-first" (nghĩ giải pháp trước khi hiểu vấn đề) không? Lúc đó nhóm nhận ra và xử lý thế nào?**
+**6.2. Nhóm có lúc nào bị "solution-first" (nghĩ giải pháp trước khi hiểu vấn đề) không? Lúc đó nhóm nhận ra và xử lý thế nào?** Nhóm dường như không bị solution-first. Nhóm luôn nhìn nhận vấn đề thực tế trước rồi đưa ra giải pháp.
 
-**6.3. Tôi có đổi ý sau khi bị phản biện không? Kể một lần cụ thể.**
+**6.3. Tôi có đổi ý sau khi bị phản biện không? Kể một lần cụ thể.** Có, **AI phản biện**: CEO và nhân viên văn phòng là hai nhóm có nhu cầu rất khác nhau. Chưa xác định ai là người trực tiếp ghi biên bản, ai là người sử dụng kết quả và ai chịu trách nhiệm theo dõi action item. **Đón nhận**: Đồng ý và thay đổi thành Người tham giac cuộc họp
 
-**6.4. Kết quả kiểm chứng (phỏng vấn/survey/research) có làm tôi bất ngờ không? Điều gì?**
+**6.4. Kết quả kiểm chứng (phỏng vấn/survey/research) có làm tôi bất ngờ không? Điều gì?** Có, cùng một bối cảnh tuy nhiên với một số người thì đó là vấn đề cần xử lí, một số người khác thì không
 
-**6.5. Điều khó nhất khi viết Problem Statement là gì?**
+**6.5. Điều khó nhất khi viết Problem Statement là gì?** Đưa vào Problem Statement giá trị đo được thực tế (như đo thời gian chờ xe, thời gian tìm kiếm căn hộ,...)
 
-**6.6. Nếu làm lại, tôi sẽ đổi gì? Tôi sẽ phản biện nhóm mạnh hơn ở điểm nào?**
+**6.6. Nếu làm lại, tôi sẽ đổi gì? Tôi sẽ phản biện nhóm mạnh hơn ở điểm nào?** Nếu làm lại, tôi sẽ mở rộng góc nhìn thành toàn bộ tuyến xe, chọn ra tuyến xe hợp lí (tối ưu giữa việc chờ đợi xe, mức độ đông đúc và tuyến đường di chuyển). Tôi sẽ phản biện nhóm mạnh hơn ở tính khả thi và tính cấp thiết của vấn đề
 
-**6.7. Hiểu bài:** giải thích bằng 5–8 câu, không nhìn tài liệu, chuỗi *problem → quy trình → metric → boundary → mức can thiệp AI → quyết định* của bài nhóm mình.
+**6.7. Hiểu bài:** Vấn đề đặt ra là khi đi tuyến xe buýt E03, cần biết mức độ đông đúc có thể chấp nhận được để di chuyển trong khoảng thời gian chấp nhận được. Quy trình hiện tại phải đứng chờ để lên chuyến xe ít đông đúc. Quy trình đưa ra là để AI dự đoán thời gian xe đến và mức độ đông đúc. Đo bằng cách bắt đầu từ thời gian chờ xe đến khi xuống xe. AI không đảm bảo xe còn chỗ và tự quyết chuyến xe.
 
 ---
 

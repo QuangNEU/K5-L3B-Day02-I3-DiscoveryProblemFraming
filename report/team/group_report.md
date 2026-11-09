@@ -126,8 +126,6 @@ Tổng hợp:
 
 ### 4.1. Quy trình hiện tại
 
-Sơ đồ (ASCII, Mermaid hoặc link ảnh trong `report/assets/`):
-
 ```text
     HIỆN TẠI — riêng thời gian chờ khoảng 20 phút/lượt (ước lượng)
 
@@ -150,8 +148,6 @@ Sơ đồ (ASCII, Mermaid hoặc link ảnh trong `report/assets/`):
 **Bottleneck**: Hành khách thiếu thông tin theo thời gian thực về thời gian xe đến và mức độ đông đúc tại điểm đón E03, dẫn đến thời gian chờ không chắc chắn và trải nghiệm di chuyển kém thuận tiện.
 
 ### 4.2. Quy trình tương lai
-
-Ghi rõ bước nào **Rule**, bước nào **AI**, bước nào **con người**, **boundary** ở đâu, **phương án quay về** khi AI sai.
 
 ```text
     TƯƠNG LAI — 5 bước, khoảng 5 phút, 2/5 bước thủ công
@@ -189,16 +185,14 @@ Ghi rõ bước nào **Rule**, bước nào **AI**, bước nào **con người*
 
 | Trường | Nội dung |
 |---|---|
-| **Actor** | |
-| **Quy trình** | |
-| **Bottleneck** | |
-| **Impact** | |
-| **Success Metric** (baseline → target, cách đo) | |
-| **Boundary** (AI không được làm gì; khi nào cần con người kiểm tra — HITL) | |
+| **Actor** | Hành khách đi E03 buổi sáng |
+| **Quy trình** | [1 Đến điểm đón E03: ? phút] → [2 Chờ xe, lướt điện thoại: khoảng 20 phút] ← BOTTLENECK: chưa biết mức đông → [3 Quan sát khi xe đến và lên xe: ? phút] |
+| **Bottleneck** | Không biết thời gian xe đến và mức độ đông đúc |
+| **Impact** | Đứng chờ xe mất 20 phút |
+| **Success Metric** (baseline → target, cách đo) | Thời gian chờ 20 phút, mong muốn đạt 5 phút, đo bằng cách bắt đầu từ thời điểm chờ xe |
+| **Boundary** (AI không được làm gì; khi nào cần con người kiểm tra — HITL) | AI chỉ dự đoán thời gian xe đến và mức độ đông đúc dựa trên dữ liệu được cung cấp. AI không điều khiển xe, không đảm bảo còn chỗ và không tự quyết định việc lên xe thay hành khách. |
 
-Phản biện nhận được (từ AI hoặc nhóm khác) và nhóm có đồng ý không:
-
--
+**Phản biện nhận được**: Tại sao phải sử dụng AI thay vì thuật toán tính toán ETA thông thường? Nhóm không đồng ý, AI có thể xem được rất nhiều yếu tố để có thể đưa ra tính toán gần chính xác hơn
 
 ---
 
