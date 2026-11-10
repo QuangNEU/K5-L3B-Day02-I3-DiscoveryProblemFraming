@@ -36,6 +36,57 @@ Gợi ý vai trò (một người có thể giữ nhiều vai): điều phối t
 
 Mỗi thành viên thêm một mục theo mẫu dưới đây, tiêu đề là `HoVaTen-MSSV`.
 
+### NguyenNhatMinh-2A202603745
+
+**Phần việc phụ trách:**
+
+- Chuẩn bị báo cáo cá nhân, đề xuất vấn đề xe buýt và tham gia phản biện.
+- Tổng hợp phần pitch, cây OST, assumption map, kiểm chứng và research trong báo cáo nhóm. Việc dùng AI được ghi ở mục 5 báo cáo cá nhân.
+
+**Đóng góp cụ thể** (mình đã làm gì, ra sản phẩm gì):
+
+- Scan 6 vấn đề theo 4 lăng kính; chuẩn bị 3 Problem Card và 3 quy trình nháp về xe buýt, phòng trọ và thu quỹ.
+- Đưa ra ba candidate; ghi câu hỏi nhận từ Quang, An và câu hỏi phản biện dành cho các bạn trong bảng pitch.
+- Tổng hợp phần kiểm chứng và research; tách hành vi đã xảy ra với ý định của người được hỏi, ghi lại các giả định cần kiểm tra.
+- Xác định hướng phát triển cho tất cả các tuyến xe buýt, chỉnh phạm vi và outcome cho nhất quán; giữ E03 ở phần bằng chứng thực tế.
+
+**Bằng chứng** (phần nào trong `group_report.md`, file nào trong `report/assets/`, commit nào):
+
+- [Báo cáo cá nhân](report/individual/2A202603745_NguyenNhatMinh.md), mục 2–5.
+- [Báo cáo nhóm](report/team/group_report.md), mục 2.1, 2.3 và 3.
+- Commit `ba98724` ghi nhận CP1–CP2 ban đầu; các phần bổ sung xem trong lịch sử commit của nhánh.
+
+**Điều mình học được từ phần nhóm:**
+
+- Cần tách phạm vi muốn phát triển khỏi phạm vi đã có bằng chứng: trải nghiệm E03 có thể là điểm bắt đầu, nhưng chưa đại diện cho mọi tuyến.
+- Mốc thời gian tổng không tự chứng minh bước nghẽn; cần đo riêng từng bước và kiểm tra kết quả ngoài tốc độ.
+- Chọn AI phải đi sau việc làm rõ pain, nguồn dữ liệu và phương án đơn giản hơn.
+
+### HoangDucAn-2A202603800
+
+**Phần việc phụ trách:**
+
+- Đưa ra các problems
+
+- Thực hiện công việc CP5
+
+**Đóng góp cụ thể** (mình đã làm gì, ra sản phẩm gì):
+
+- Cung cấp 6 problems và chọn ra 3 problems
+
+- Trình bày quy trình hiện tại và tương lai của bài toán
+
+- Trình bày bàng Problem Statement v0
+
+**Bằng chứng** (phần nào trong `group_report.md`, file nào trong `report/assets/`, commit nào):
+- `group_report.md`: mục 2.2, 2.4, 3.3, 6.1 - 6.4, 7, 8, 9, 10
+
+- Phần 4 và 5 của `group_report.md`
+
+**Điều mình học được từ phần nhóm:**
+
+- Cách mọi người quan sát mọi người xung quanh để nắm bắt được vấn đề cần giải quyết
+
 ### Nguyễn Minh Quang - 2A202603791
 
 **Phần việc phụ trách:**
