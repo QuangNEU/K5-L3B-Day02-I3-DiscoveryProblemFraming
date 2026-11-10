@@ -274,7 +274,7 @@ Bài của nhóm nằm ở ô: **Độ mơ hồ thấp, Độ phức tạp trung
 
 | Trường | Nội dung |
 |---|---|
-| **Actor** | Sinh viên NEU đi xe buýt E03 trong khung giờ cao điểm (7h - 8h sáng). |
+| **Actor** | Hành khách đi xe buýt E03 trong khung giờ cao điểm (7h - 8h sáng). |
 | **Quy trình** | Mở app → Xem vị trí xe → (Mới) Xem độ đông đúc → Quyết định ra bến/lên xe/đợi chuyến sau. |
 | **Bottleneck** | Quyết định mù mờ vì chỉ thấy vị trí GPS, dẫn đến việc thường xuyên bị kẹt trên những chuyến xe quá tải (mất 20 phút chịu đựng). |
 | **Impact** | Trải nghiệm mệt mỏi, stress trước giờ học; không phân bổ được thời gian chờ hợp lý. |
