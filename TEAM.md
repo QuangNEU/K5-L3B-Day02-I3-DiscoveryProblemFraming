@@ -28,8 +28,8 @@ Gợi ý vai trò (một người có thể giữ nhiều vai): điều phối t
 | CP3 — Hội tụ nhóm | | | Cluster, cây OST, bảng chấm điểm |
 | CP4 — Kiểm chứng | | | Assumption map, snapshot hoặc survey |
 | CP4 — Research | | | Bảng research có link |
-| CP5 — Quy trình trước/sau | | | Quy trình + bảng before/after |
-| CP5 — Problem Statement v0 | | | Problem Statement v0 |
+| CP5 — Quy trình trước/sau | Hoàng Đức An | | Quy trình + bảng before/after |
+| CP5 — Problem Statement v0 | Hoàng Đức An | | Problem Statement v0 |
 | CP6 — Mức can thiệp + Problem Statement v1 | | | Ma trận, AI Canvas, eval, Problem Statement v1 |
 | CP6 — Quyết định | | | 4 rủi ro + Go/Not Yet/No-Go |
 
@@ -47,11 +47,11 @@ Mỗi thành viên thêm một mục theo mẫu dưới đây, tiêu đề là `
 
 **Đóng góp cụ thể** (mình đã làm gì, ra sản phẩm gì):
 
-- Cung cấp 6 problems và chọn ra 3 problems
+- Cung cấp 6 problems và chọn ra 3 problems để thảo luận nhóm
 
-- Trình bày quy trình hiện tại và tương lai của bài toán
+- Tìm hiểu quy trình hiện tại và tương lai của bài toán -> Sơ đồ quy trình và phần quy trình
 
-- Trình bày bàng Problem Statement v0
+- Tìm hiểu Problem Statement v0 -> Bảng Problem Statement v0
 
 **Bằng chứng** (phần nào trong `group_report.md`, file nào trong `report/assets/`, commit nào):
 
