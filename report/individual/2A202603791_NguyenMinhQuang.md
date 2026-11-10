@@ -1,5 +1,15 @@
 # Phần cá nhân (của Quang)
 
+
+## 1. Thông tin học viên
+
+- Họ tên: Nguyễn Minh Quang
+- MSSV: 2A202603791
+- Email trường (không bắt buộc, repo có thể để public):
+- Tên nhóm: I3
+- Link repo nhóm: https://github.com/QuangNEU/K5-L3B-Day02-I3-DiscoveryProblemFraming
+
+---
 ## 2. Scan problem (CP1)
 
 Quang scan 5 problem, đạt mức tối thiểu 5.
@@ -104,3 +114,62 @@ Quang scan 5 problem, đạt mức tối thiểu 5.
 | Điểm yếu AI chỉ ra | Đồng ý? | Đã sửa gì |
 |---|---|---|
 | AI có thể hiểu sai hoặc dịch sai các thuật ngữ System Design chuyên sâu không? | Đồng ý | Thêm boundary: Phải sử dụng prompt ép AI giữ nguyên thuật ngữ tiếng Anh gốc, không tự ý dịch sang tiếng Việt. | 
+# 4. Tôi đã tham gia phần nào (CP3 → CP7)
+
+| Hoạt động | Tôi đã làm gì? | Kết quả / ảnh hưởng tới bài nhóm |
+|---|---|---|
+| **Pitch Problem Card** | Trình bày 3 ý tưởng cá nhân (Tóm tắt tài liệu đồ án, Gom log realtime, Tóm tắt podcast). | Mang đến các bài toán thực tế từ góc nhìn của sinh viên IT/Dev để nhóm có nhiều lựa chọn kỹ thuật. |
+| **Phản biện bài của bạn khác** | Đặt câu hỏi cho bài xe buýt E03 của Minh: *"Lấy API đếm người real-time ở đâu ra để làm?"* | Giúp nhóm nhận diện ngay rủi ro cốt lõi về Tính khả thi (Feasibility) của dữ liệu. |
+| **Nhận phản biện** | Minh hỏi bài Tóm tắt tài liệu của tôi: *"AI có bỏ sót các yêu cầu ẩn/edge case của đồ án không?"* | Tôi sửa lại Problem Card: Bổ sung boundary là AI chỉ quét ý chính, người dùng vẫn phải tự đọc đối chiếu để tránh sót requirement. |
+| **Gom cluster / cây OST** | Tham gia phân loại 9 candidate thành 3 nhóm (Rút trích thông tin, So sánh/Quyết định, Phân loại dữ liệu). | Giúp nhóm nhìn ra bức tranh tổng thể để xây dựng Opportunity Solution Tree rõ ràng hơn. |
+| **Chọn candidate problem** | Trực tiếp đánh giá điểm Feasibility và Impact cho các candidate, chốt chọn bài E03 của Minh. | Thống nhất hướng đi chung, gác lại bài toán cá nhân để làm một bài toán mang tính cộng đồng lớn hơn. |
+| **Kiểm chứng / research** | Phân tích giải pháp kỹ thuật, đề xuất dùng dữ liệu thẻ từ (Tap-in) kết hợp ML thay vì đòi hỏi camera đếm người. | Giải quyết được rào cản lớn nhất của dự án, chứng minh tính khả thi của bài toán xe buýt. |
+| **Quy trình nhóm** | Vẽ quy trình tương lai (Before/After), chỉ rõ điểm AI can thiệp vào hành trình người dùng. | Làm rõ được nút thắt (bottleneck) cũ đã được xóa bỏ như thế nào nhờ hệ thống cảnh báo màu. |
+| **Problem Statement** | Cập nhật v1, đổi Success Metric sang độ chính xác của AI và định hình rõ Boundary. | Định hình rõ ranh giới: AI chỉ gợi ý mức độ đông, không ép người dùng đổi lộ trình. |
+| **Mức can thiệp AI** | Xây dựng AI Canvas, lập bảng so sánh 4 mức độ AI và trả lời 2 câu hỏi PAIR. | Chốt được mức Workflow vì lý giải được tại sao Rule cứng không xử lý được việc khách xuống xe không quẹt thẻ. |
+| **Quyết định** | Đánh giá 4 rủi ro, đề xuất dùng Mock Data để chạy Pilot. | Chốt quyết định "Go" với phương án an toàn, vừa sức với một môn học. |
+
+---
+
+# 5. Dùng AI
+
+| Checkpoint | Tôi dùng AI để làm gì? | AI hữu ích ở đâu? | AI sai hoặc hời hợt ở đâu? | Tôi sửa gì bằng nhận định của mình? |
+|---|---|---|---|---|
+| **CP1 Scan** | Nhờ gợi ý thêm vấn đề qua 4 lăng kính cho sinh viên IT. | Khơi gợi được ý tưởng về việc gom log realtime và nghe podcast. | Đề xuất giải pháp quá rộng kiểu "trợ lý học tập toàn năng". | Bỏ qua các ý chung chung, bắt ép AI viết theo định dạng Job Story cho một task cụ thể. |
+| **CP2 Problem Card** | Đóng vai PM khó tính để phản biện các card cá nhân. | Chỉ ra rằng baseline 45-60 phút chưa rõ ràng (cho tài liệu dài bao nhiêu). | Xui tôi làm Agent tự động chia task/tạo ticket lên Jira thay cho trưởng nhóm. | Bác bỏ ý AI, giữ lại bước "tự chia task" làm boundary để PM kiểm soát được thực tế. |
+| **CP4 Research** | Tìm hiểu cách thế giới giải quyết bài toán đếm khách xe buýt. | Gợi ý ý tưởng dùng Machine Learning kết hợp dữ liệu quét thẻ. | AI đưa ra pattern của nước ngoài (tap-in/tap-out chuẩn chỉnh), không khớp hành vi ở Việt Nam (không tap-out). | Đưa thêm giả định/rule: Dùng ML nội suy số người xuống xe tại các trạm lớn dựa trên lịch sử thay vì đợi tap-out. |
+| **CP5 Quy trình** | Hỗ trợ chuyển mô tả bằng lời sang dạng step-by-step. | Trình bày luồng Before/After nhanh và trực quan. | Gộp chung bước AI dự đoán và bước người dùng ra quyết định làm một. | Tách bạch rõ: AI chỉ dừng ở việc "hiển thị màu", con người là người chốt "lên xe hay ở lại". |
+| **CP5–6 Problem Statement** | Hoàn thiện cấu trúc bảng và chuẩn hóa wording. | Viết ngắn gọn, súc tích đúng ngôn ngữ Product. | Đưa Success Metric là "Giảm thời gian chờ xe". | Đổi Metric thành "Độ chính xác của thuật toán >80%", vì chờ xe vắng có khi lâu hơn chờ xe đông. |
+| **CP6 Mức can thiệp / quyết định** | Lập bảng so sánh 4 mức (No AI, Rule, Workflow, Agent). | Lập luận rất chặt chẽ việc tại sao Rule (cộng trừ đơn thuần) thất bại. | Ở mức Agent, AI gợi ý hệ thống tự động book xe Grab cho sinh viên nếu buýt quá đông. | Gạch bỏ ngay lập tức vì phi thực tế về chi phí, nằm ngoài khả năng của một sinh viên/app buýt. |
+
+---
+
+# 6. Reflection (CP7)
+
+**6.1. Tôi học được gì khi nghe top 3 problems của các bạn khác?**
+Tôi nhận ra rằng một "vấn đề tốt" không nhất thiết phải là một vấn đề công nghệ đao to búa lớn. Ban đầu tôi chỉ chăm chăm vào năng suất cá nhân (đọc tài liệu, code, log), nhưng khi nghe bài xe buýt E03 của Minh, tôi hiểu ra những vấn đề có impact cộng đồng cao, đụng chạm đến nỗi đau thường nhật của hàng ngàn sinh viên mới là "mỏ vàng" thực sự để làm Product.
+
+**6.2. Nhóm có lúc nào bị "solution-first" (nghĩ giải pháp trước khi hiểu vấn đề) không? Lúc đó nhóm nhận ra và xử lý thế nào?**
+Có. Lúc mới chọn bài E03, cả nhóm lập tức bàn nhau: *"Hay là mình lắp camera AI trên cửa xe để đếm đầu người?"*. Đây là điển hình của solution-first. Nhóm nhận ra sai lầm khi bắt đầu phân tích rủi ro Feasibility: chúng ta không có tiền và quyền để lắp camera lên xe của VinBus. Nhóm lùi lại, nhìn vào lõi vấn đề là "cần biết độ đông", và chuyển hướng sang tận dụng dữ liệu quẹt thẻ sẵn có kết hợp Machine Learning.
+
+**6.3. Tôi có đổi ý sau khi bị phản biện không? Kể một lần cụ thể.**
+Tôi đã thay đổi hoàn toàn quyết định chọn đề tài của mình. Lúc đầu, tôi khăng khăng bảo vệ ý tưởng "Tóm tắt tài liệu môn học" vì thấy nó dễ làm, an toàn và quy trình cực kỳ rõ ràng. Nhưng khi Minh phản biện rằng: *"Bài đó hay nhưng hơi cá nhân, nếu làm bài E03 thì khảo sát được sinh viên"*, tôi đã suy nghĩ lại. Cuối cùng, tôi nhượng bộ và đồng ý chốt bài E03 vì giá trị thực tiễn của nó thuyết phục hơn hẳn.
+
+**6.4. Kết quả kiểm chứng (phỏng vấn/survey/research) có làm tôi bất ngờ không? Điều gì?**
+Điều làm tôi bất ngờ nhất khi phỏng vấn là sự đánh đổi của sinh viên. Tôi luôn nghĩ "sợ muộn học/sợ bị điểm danh" là nỗi sợ lớn nhất. Tuy nhiên, 3/4 người được hỏi thú nhận rằng thà đi muộn 10 phút còn hơn nhét lên chuyến E03 đông đúc, vì *"lên trường mệt lả cũng không học nổi"*. Insight này chứng minh việc cung cấp thông tin để họ lùi chuyến là thực sự có giá trị.
+
+**6.5. Điều khó nhất khi viết Problem Statement là gì?**
+Đó là việc xác định Success Metric (Chỉ số thành công) sao cho đúng. Lúc đầu nhóm đo bằng "thời gian chờ giảm đi". Nhưng thực tế, nếu quyết định chờ chuyến sau cho vắng, thời gian chờ lại *tăng lên*. Cuối cùng tôi nhận ra, giá trị lõi hệ thống mang lại là "thông tin đúng", nên metric phải là độ chính xác của dự đoán AI >80% so với thực tế, và sự hài lòng của người dùng vì làm chủ được thời gian.
+
+**6.6. Nếu làm lại, tôi sẽ đổi gì? Tôi sẽ phản biện nhóm mạnh hơn ở điểm nào?**
+Nếu làm lại, tôi sẽ phản biện mạnh hơn ở khâu thu thập dữ liệu kiểm chứng. Việc phỏng vấn 4 người hơi ít để kết luận đại trà. Tôi cũng sẽ muốn nhóm thiết kế một form khảo sát gửi lên group sinh viên trường để có định lượng rõ ràng hơn về tỉ lệ phần trăm các bạn sẵn sàng "bỏ chuyến đông chờ chuyến vắng".
+
+**6.7. Hiểu bài:**
+Bài toán của nhóm là sinh viên thường xuyên bị nhồi nhét trên tuyến buýt E03 do không biết trước mức độ đông đúc để quyết định đi hay chờ. Quy trình tương lai can thiệp AI bằng cách lấy log quẹt thẻ, dùng Machine Learning dự đoán độ đông và hiển thị màu cảnh báo trên app. Metric thành công được xác định bằng độ chính xác của dự đoán (>80%) và đánh giá từ người dùng. Boundary cốt lõi là AI chỉ cung cấp thông tin, quyền quyết định bước lên xe hay không hoàn toàn thuộc về con người. Do độ phức tạp của bài toán đếm người (nhiều biến số ngầm) nhưng đầu ra rõ ràng (nhãn màu), nhóm chọn mức can thiệp Workflow. Cuối cùng, nhóm quyết định Go bằng cách triển khai một bản Pilot sử dụng dữ liệu giả lập (Mock Data) riêng cho tuyến E03 để chứng minh thuật toán.
+
+---
+
+# 7. Tài liệu tham khảo
+- Tài liệu học phần *Discovery & Problem Framing* (Slide bài giảng).
+- Google Maps Help - Cơ chế hoạt động của tính năng Transit Crowding.
+- Các nghiên cứu về *Alighting Estimation for Smart Card Data* (Dùng ML dự đoán khách xuống xe).
