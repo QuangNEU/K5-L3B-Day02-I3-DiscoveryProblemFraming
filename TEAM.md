@@ -63,20 +63,26 @@ Mỗi thành viên thêm một mục theo mẫu dưới đây, tiêu đề là `
 - Mốc thời gian tổng không tự chứng minh bước nghẽn; cần đo riêng từng bước và kiểm tra kết quả ngoài tốc độ.
 - Chọn AI phải đi sau việc làm rõ pain, nguồn dữ liệu và phương án đơn giản hơn.
 
-### HoVaTen-MSSV
+### HoangDucAn-2A202603800
 
 **Phần việc phụ trách:**
 
--
+- Đưa ra các problems
+
+- Thực hiện công việc CP5
 
 **Đóng góp cụ thể** (mình đã làm gì, ra sản phẩm gì):
 
--
+- Cung cấp 6 problems và chọn ra 3 problems
+
+- Trình bày quy trình hiện tại và tương lai của bài toán
+
+- Trình bày bàng Problem Statement v0
 
 **Bằng chứng** (phần nào trong `group_report.md`, file nào trong `report/assets/`, commit nào):
 
--
+- Phần 4 và 5 của `group_report.md`
 
 **Điều mình học được từ phần nhóm:**
 
--
+- Cách mọi người quan sát mọi người xung quanh để nắm bắt được vấn đề cần giải quyết
