@@ -174,7 +174,7 @@ Ban đầu nhóm e ngại bài E03 bị thiếu API dữ liệu số lượng kh
 | 2    | Hành khách               | Thời gian chờ xe, điện thoại cá nhân               | Tiếp tục chờ xe, theo dõi thời gian       | Khoảng 20 phút       | Bottleneck: Chưa biết mức độ đông đúc và thời gian xe đến     |
 | 3    | Hành khách               | Xe đã đến, xác nhận đúng tuyến                     | Lên xe thành công                         | ? phút               | Phụ thuộc vào số lượng người lên xe và tình trạng xếp hàng    |
 
-**Bottleneck**: Hành khách thiếu thông tin theo thời gian thực về thời gian xe đến và mức độ đông đúc tại điểm đón E03, dẫn đến thời gian chờ không chắc chắn và trải nghiệm di chuyển kém thuận tiện.
+**Bottleneck**: Hành khách thiếu thông tin về mức độ đông đúc tại điểm đón E03, dẫn đến thời gian chờ không chắc chắn và trải nghiệm di chuyển kém thuận tiện.
 
 ### 4.2. Quy trình tương lai
 

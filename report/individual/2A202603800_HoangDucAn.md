@@ -134,6 +134,7 @@ Quy trình nháp hiện tại:
 | Hoạt động | Tôi đã làm gì? | Kết quả / ảnh hưởng tới bài nhóm |
 |---|---|---|
 | Pitch Problem Card | Pitch Tóm tắt cuộc họp, Phân loại yêu cầu CSKH, Lọc tìm tự động căn hộ | Vào shortlist |
+| Phản biện bài của bạn khác | Câu hỏi tôi đã đặt: Gom log theo timestamp đã đủ để tìm lỗi chưa? | Đuọc tiếp nhận và điều chỉnh |
 | Nhận phản biện | Câu hỏi tôi nhận được: CSKH có scope quá rộng| Tôi đã sửa gì: Thu hẹp lại với chỉ CSKH phòng khách sạn|
 | Chọn candidate problem | Đánh giá điểm theo tiêu chí | Nhóm chọn được problem phù hợp |
 | Quy trình nhóm | Vẽ quy trình hiện tại và tương lai | Nhóm dùng làm bản cuối |
@@ -167,7 +168,7 @@ Trả lời bằng trải nghiệm thật của bạn, tối thiểu 200 từ ch
 
 **6.6. Nếu làm lại, tôi sẽ đổi gì? Tôi sẽ phản biện nhóm mạnh hơn ở điểm nào?** Nếu làm lại, tôi sẽ mở rộng góc nhìn thành toàn bộ tuyến xe, chọn ra tuyến xe hợp lí (tối ưu giữa việc chờ đợi xe, mức độ đông đúc và tuyến đường di chuyển). Tôi sẽ phản biện nhóm mạnh hơn ở tính khả thi và tính cấp thiết của vấn đề
 
-**6.7. Hiểu bài:** Vấn đề đặt ra là khi đi tuyến xe buýt E03, cần biết mức độ đông đúc có thể chấp nhận được để di chuyển trong khoảng thời gian chấp nhận được. Quy trình hiện tại phải đứng chờ để lên chuyến xe ít đông đúc. Quy trình đưa ra là để AI dự đoán thời gian xe đến và mức độ đông đúc. Đo bằng cách bắt đầu từ thời gian chờ xe đến khi xuống xe. AI không đảm bảo xe còn chỗ và tự quyết chuyến xe.
+**6.7. Hiểu bài:** Vấn đề đặt ra là khi đi tuyến xe buýt E03, cần biết mức độ đông đúc có thể chấp nhận được để di chuyển trong khoảng thời gian chấp nhận được. Quy trình hiện tại phải đứng chờ để lên chuyến xe ít đông đúc. Quy trình đưa ra là để AI dự đoán thời gian xe đến và mức độ đông đúc. Đo bằng cách bắt đầu từ thời gian chờ xe đến khi xuống xe. AI không đảm bảo xe còn chỗ và tự quyết chuyến xe. Với bài toán này chỉ áp dụng workflow cố định kết hợp với AI để giải quyết nhằm tối ưu độ chính xác và chi phí. Nhóm quyết định sẽ GO với dự án này, tuy nhiên chỉ triển khai với phạm vi nhỏ.
 
 ---
 

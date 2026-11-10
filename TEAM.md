@@ -72,11 +72,11 @@ Mỗi thành viên thêm một mục theo mẫu dưới đây, tiêu đề là `
 
 **Đóng góp cụ thể** (mình đã làm gì, ra sản phẩm gì):
 
-- Cung cấp 6 problems và chọn ra 3 problems
+- Cung cấp 6 problems và chọn ra 3 problems để thảo luận nhóm
 
-- Trình bày quy trình hiện tại và tương lai của bài toán
+- Tìm hiểu quy trình hiện tại và tương lai của bài toán -> Sơ đồ quy trình và phần quy trình
 
-- Trình bày bàng Problem Statement v0
+- Tìm hiểu Problem Statement v0 -> Bảng Problem Statement v0
 
 **Bằng chứng** (phần nào trong `group_report.md`, file nào trong `report/assets/`, commit nào):
 - `group_report.md`: mục 2.2, 2.4, 3.3, 6.1 - 6.4, 7, 8, 9, 10
