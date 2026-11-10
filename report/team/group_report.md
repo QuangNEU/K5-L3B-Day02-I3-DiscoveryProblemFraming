@@ -126,39 +126,58 @@ Tổng hợp:
 
 ### 4.1. Quy trình hiện tại
 
-Sơ đồ (ASCII, Mermaid hoặc link ảnh trong `report/assets/`):
-
 ```text
+    HIỆN TẠI — riêng thời gian chờ khoảng 20 phút/lượt (ước lượng)
 
+    [1 Đến điểm đón E03: ? phút]
+
+    → [2 Chờ xe, lướt điện thoại: khoảng 20 phút] ← BOTTLENECK: chưa biết mức đông
+    
+    → [3 Quan sát khi xe đến và lên xe: ? phút]
+
+    ? phút = chưa đo riêng; 20 phút không phải tổng thời gian của toàn bộ hành trình.
+    Chưa xác nhận việc bỏ chuyến đông để chờ chuyến sau.
 ```
 
-| Bước | Actor | Input | Output | Thời gian / tần suất | Ghi chú |
-|---:|---|---|---|---|---|
-| 1 | | | | | |
-| 2 | | | | | |
-| 3 | | | | | |
-| 4 | | | | | |
-| 5 | | | | | |
+| Bước | Actor                    | Input                                              | Output                                    | Thời gian / tần suất | Ghi chú                                                       |
+| ---- | ------------------------ | -------------------------------------------------- | ----------------------------------------- | -------------------- | ------------------------------------------------------------- |
+| 1    | Hành khách               | Đến điểm đón E03                                   | Có mặt tại điểm đón, sẵn sàng chờ xe      | Ngay khi đến         | Cần xác định đúng vị trí đón                                  |
+| 2    | Hành khách               | Thời gian chờ xe, điện thoại cá nhân               | Tiếp tục chờ xe, theo dõi thời gian       | Khoảng 20 phút       | Bottleneck: Chưa biết mức độ đông đúc và thời gian xe đến     |
+| 3    | Hành khách               | Xe đã đến, xác nhận đúng tuyến                     | Lên xe thành công                         | ? phút               | Phụ thuộc vào số lượng người lên xe và tình trạng xếp hàng    |
 
-**Bottleneck chính:**
+**Bottleneck**: Hành khách thiếu thông tin theo thời gian thực về thời gian xe đến và mức độ đông đúc tại điểm đón E03, dẫn đến thời gian chờ không chắc chắn và trải nghiệm di chuyển kém thuận tiện.
 
 ### 4.2. Quy trình tương lai
 
-Ghi rõ bước nào **Rule**, bước nào **AI**, bước nào **con người**, **boundary** ở đâu, **phương án quay về** khi AI sai.
-
 ```text
+    TƯƠNG LAI — 5 bước, khoảng 5 phút, 2/5 bước thủ công
 
+    [1 Hành khách mở ứng dụng, chọn điểm đón E03: 1 phút] ← RULE (GPS / định vị)
+
+    → [2 AI dự đoán thời gian xe đến (ETA): 5 giây] ← AI (GPS + dữ liệu giao thông)
+
+    → [3 AI dự đoán mức độ đông đúc tại điểm đón: 2 phút] ← AI (dữ liệu hành khách + lịch sử)
+
+    → [4 Ứng dụng hiển thị ETA, mức độ đông đúc và gửi thông báo: 1 phút] ← AI + RULE (cập nhật thông tin, thông báo tự động)
+
+    → [5 Hành khách xác nhận đúng xe và lên xe: ? phút] ← CON NGƯỜI
+
+    BOUNDARY: AI chỉ dự đoán thời gian xe đến và mức độ đông đúc dựa trên dữ liệu được cung cấp. AI không điều khiển xe, không đảm bảo còn chỗ và không tự quyết định việc lên xe thay hành khách.
+
+    PHƯƠNG ÁN QUAY VỀ: Nếu AI không dự đoán được hoặc dữ liệu không chính xác → Ứng dụng hiển thị lịch trình xe và thông tin thời gian dự kiến theo phương pháp truyền thống; hành khách tự quan sát và chờ xe.
+
+    Lưu ý: Tổng thời gian trên là mục tiêu thiết kế sơ bộ, chưa phải số liệu đo lường thực tế.
 ```
 
 ### 4.3. Before / after
 
-| Chỉ số | Trước | Sau (kỳ vọng) | Ghi chú |
-|---|---:|---:|---|
-| Số bước | | | |
-| Tổng thời gian | | | |
-| Số bước thủ công | | | |
-| Bottleneck chính | | | |
-| Rủi ro mới phát sinh | | | |
+| Chỉ số               | Trước                                                     | Sau (kỳ vọng)                                                        | Ghi chú                                                               |
+| -------------------- | --------------------------------------------------------- | -------------------------------------------------------------------- | --------------------------------------------------------------------- |
+| Số bước              | 3                                                         | 5                                                                    | Quy trình được bổ sung các bước dự đoán và cung cấp thông tin bằng AI |
+| Tổng thời gian       | Khoảng 20 phút chờ xe + thời gian di chuyển đến và lên xe | Khoảng 6 phút xử lý trên ứng dụng + thời gian di chuyển và lên xe    | Thời gian chờ thực tế có thể giảm nhờ chủ động lựa chọn thời điểm     |
+| Số bước thủ công     | 3/3                                                       | 1/5                                                                  | Hành khách vẫn tự xác nhận xe và lên xe                               |
+| Bottleneck chính     | Không biết thời gian xe đến và mức độ đông đúc            | Độ chính xác của dữ liệu GPS và mô hình dự đoán                      | Phụ thuộc vào chất lượng và tính cập nhật của dữ liệu                 |
+| Rủi ro mới phát sinh | Chờ xe lâu, không biết tình trạng đông đúc                | AI dự đoán sai ETA hoặc mức độ đông đúc, dữ liệu GPS không chính xác | Cần có phương án dự phòng khi AI hoạt động không hiệu quả             |
 
 ---
 
@@ -166,16 +185,14 @@ Ghi rõ bước nào **Rule**, bước nào **AI**, bước nào **con người*
 
 | Trường | Nội dung |
 |---|---|
-| **Actor** | |
-| **Quy trình** | |
-| **Bottleneck** | |
-| **Impact** | |
-| **Success Metric** (baseline → target, cách đo) | |
-| **Boundary** (AI không được làm gì; khi nào cần con người kiểm tra — HITL) | |
+| **Actor** | Hành khách đi E03 buổi sáng |
+| **Quy trình** | [1 Đến điểm đón E03: ? phút] → [2 Chờ xe, lướt điện thoại: khoảng 20 phút] ← BOTTLENECK: chưa biết mức đông → [3 Quan sát khi xe đến và lên xe: ? phút] |
+| **Bottleneck** | Không biết thời gian xe đến và mức độ đông đúc |
+| **Impact** | Đứng chờ xe mất 20 phút |
+| **Success Metric** (baseline → target, cách đo) | Thời gian chờ 20 phút, mong muốn đạt 5 phút, đo bằng cách bắt đầu từ thời điểm chờ xe |
+| **Boundary** (AI không được làm gì; khi nào cần con người kiểm tra — HITL) | AI chỉ dự đoán thời gian xe đến và mức độ đông đúc dựa trên dữ liệu được cung cấp. AI không điều khiển xe, không đảm bảo còn chỗ và không tự quyết định việc lên xe thay hành khách. |
 
-Phản biện nhận được (từ AI hoặc nhóm khác) và nhóm có đồng ý không:
-
--
+**Phản biện nhận được**: Tại sao phải sử dụng AI thay vì thuật toán tính toán ETA thông thường? Nhóm không đồng ý, AI có thể xem được rất nhiều yếu tố để có thể đưa ra tính toán gần chính xác hơn
 
 ---
 
